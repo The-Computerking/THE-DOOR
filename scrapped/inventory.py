@@ -1,0 +1,3 @@
+inventoryitems = []
+armourslot = " "
+weponsslot = ""
