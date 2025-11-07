@@ -12,4 +12,8 @@ ranum = randint(0, 9)
 ranum2 = randint(0, 9)
 ranum3 = randint(0, 9)
 # dungeon chests
+
 dungeonchest1 = randint(0, 9)
+
+#story mode stuff
+smdhr = randint(1, 3)
