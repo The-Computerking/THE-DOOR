@@ -39,7 +39,7 @@ itemsslots = []
 
 #what certain varibles mean
 #ptd = punch the door
-
+#wdtwtd = what do you want to do
 
 
 #story mode game
@@ -102,4 +102,24 @@ elif door == "yes":
 print(" ")
 print("you destroyed it")
 print(" ")
+print("you go inside and see a room with a chest and a door ")
+wdtwtd = input("what do you want to do chest or door? ")
+if wdtwtd == "inventory":
+    inventory()
+invalid = True
+if wdtwtd == "chest" or wdtwtd == "door":
+    invalid = False
 
+
+# more input validation
+while invalid == True:
+    print("wrong input")
+    wdtwtd = input("yes or no? ")
+    if wdtwtd == "chest" or wdtwtd == "door":
+        invalid = False
+    else:
+        continue
+if wdtwtd == "chest":
+    print("you walk over to the chest and open it ")
+elif wdtwtd == "door":
+    print("you walk over to the door its locked")
