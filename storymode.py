@@ -121,5 +121,17 @@ while invalid == True:
         continue
 if wdtwtd == "chest":
     print("you walk over to the chest and open it ")
+    smcr = randint(1, 9)
+    smc = items[smcr]
+    punch = 1
+    print(smc)
+    if smc == "a sword" or smc == "an axe" or smc == "a spear" or smc == "a mace":
+        weaponsslot = smc
+        if punch == 1:
+            punch = punch + 4
+        elif punch != 1:
+            punch = punch + 5
+        print(f" you do {punch} damge now")
+        
 elif wdtwtd == "door":
     print("you walk over to the door its locked")
