@@ -102,36 +102,7 @@ if door == "no":
     print("you turn round and bam you die")
 elif door == "yes":
     print("you try the door its locked ")
-    while healthdoor > 0:
-        print("there is a door")
-        print(" ")
-        # ptd = Punch The Door
-        ptd = input("do you want to punch? ")
-        if ptd == "inventory":
-            inventory()
-        invalid = True
-        if ptd == "yes" or ptd == "no" or ptd == "ptd":
-            invalid = False
-
-
-        # more input validation
-        while invalid == True:
-            print("wrong input")
-            ptd = input("yes or no? ")
-            if ptd == "yes" or ptd == "no" or ptd == "ptd":
-                invalid = False
-            else:
-                continue
-
-        if ptd == "no":
-            print("You Turn Around and Leave")
-            exit()
-        elif ptd == "ptd":
-            healthdoor = healthdoor - 10
-        elif ptd == "yes":
-            healthdoor = healthdoor - punch
-            print(f"you did {punch} damage")
-            print("door health ", healthdoor)
+    doorfight()
 
 print(" ")
 print("you destroyed it")
@@ -171,3 +142,7 @@ elif wdtwtd == "door":
     print("you walk over to the door its locked")
 doorfight()
 print("complete ")
+print("the door falls to the floor behind it you see ")
+print(f"a creature you look closer its got {skin[skinrandom]} skin")
+print(f"and {teeth[skinrandom]} teeth and {claws[clawrandom]} {clawsharpness[clawsharpnessrandom]} claws")
+print("it gets up")
