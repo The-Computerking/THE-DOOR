@@ -58,9 +58,9 @@ def doorfight():
                 print(f"you did {punch} damage")
                 print("door health ", healthdoor)
 
-def creturefight():
-    creturehealth = randint(1, 10)
-    while creturehealth > 0:
+def creaturefight():
+    creaturehealth = randint(1, 10)
+    while creaturehealth > 0:
             ptd = input("do you want to punch? ")
             if ptd == "inventory":
                 inventory()
@@ -82,11 +82,11 @@ def creturefight():
                 print("You Turn Around and Leave")
                 exit()
             elif ptd == "ptd":
-                creturehealth = creturehealth - 10
+                creaturehealth = creaturehealth - 10
             elif ptd == "yes":
-                creturehealth = creturehealth - punch
+                creaturehealth = creaturehealth - punch
                 print(f"you did {punch} damage")
-                print("creature health ", creturehealth)
+                print("creature health ", creaturehealth)
 
 #varibles
 playerhealth = 20
@@ -170,10 +170,13 @@ if wdtwtd == "chest":
 elif wdtwtd == "door":
     print("you walk over to the door its locked")
 doorfight()
-print("complete ")
+print(" ")
 print("the door falls to the floor behind it you see ")
 print(f"a creature you look closer its got {skin[skinrandom]} skin")
 print(f"and {teeth[skinrandom]} teeth and {claws[clawrandom]} {clawsharpness[clawsharpnessrandom]} claws")
 print("you wonder what it is and why its here ")
 print("it gets up")
-creturefight()
+print(" ")
+creaturefight()
+
+print("after you defeat the creature the floor colapses you and the creatures body fall down")
