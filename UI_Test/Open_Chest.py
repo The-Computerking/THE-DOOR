@@ -4,10 +4,10 @@ import subprocess
 def d(): root.destroy()
 def n(): 
     root.destroy()
-    subprocess.run("python UI_Test/", shell=True)
+    subprocess.run("python UI_Test/Inside_Chest.py", shell=True)
 
 root = Tk()
-root.geometry("1300x500")
+root.geometry("800x800")
 frame = Frame(root)
 frame.pack()
 
@@ -25,4 +25,3 @@ button3 = Button(leftframe, text="NO", command=d).grid(column=0, row=2)
 
 root.title("Test")
 root.mainloop()
-print("works")

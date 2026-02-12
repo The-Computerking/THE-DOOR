@@ -1,10 +1,12 @@
 from tkinter import *
 import subprocess
+from Items import chestia
+
 
 def d(): root.destroy()
 def n(): 
     root.destroy()
-    subprocess.run("python UI_Test/Open_Chest.py", shell=True)
+    subprocess.run("python UI_Test/Next_Day.py", shell=True)
 
 root = Tk()
 root.geometry("800x800")
@@ -17,7 +19,7 @@ leftframe.pack(side=LEFT)
 rightframe = Frame(root)
 rightframe.pack(side=RIGHT)
 
-doortxt = Label(frame, text="do you want to enter the room").grid(column=0, row=0)
+doortxt = Label(frame, text=f"inside the chest is {chestia}").grid(column=0, row=0)
 button1 = Button(leftframe, text="YES", command=n).grid(column=0, row=1)
 button3 = Button(leftframe, text="NO", command=d).grid(column=0, row=2)
 
