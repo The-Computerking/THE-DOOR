@@ -5,7 +5,7 @@ import subprocess
 def d(): root.destroy()
 def n(): 
     root.destroy()
-    subprocess.run("python UI_Test/Discovered_Creature.py", shell=True)
+    subprocess.run("python UI_Test/Chest_Two.py", shell=True)
 
 root = Tk()
 root.geometry("800x800")
@@ -18,8 +18,8 @@ leftframe.pack(side=LEFT)
 rightframe = Frame(root)
 rightframe.pack(side=RIGHT)
 
-doortxt = Label(frame, text=f"inside you see a creature").grid(column=0, row=0)
-doortxt = Label(frame, text=f"do you want to get a closer look at it?").grid(column=0, row=1)
+doortxt = Label(frame, text=f"you see a chest").grid(column=0, row=0)
+label = Label(frame, text="do you want to open the chest?",).grid(column=0, row=1)
 button1 = Button(leftframe, text="YES", command=n, bg="grey15", fg="white", bd=0).grid(column=0, row=2)
 button2 = Button(leftframe, text="NO", command=d, bg="grey15", fg="white", bd=0).grid(column=0, row=3)
 
