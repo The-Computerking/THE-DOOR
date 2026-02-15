@@ -22,7 +22,7 @@ leftframe.pack(side=LEFT)
 rightframe = Frame(root)
 rightframe.pack(side=RIGHT)
 
-text = Label(frame, text=f"YOU DIED").grid(column=0, row=0)
+label1 = Label(frame, text="YOU DIED", bg="grey15", fg="white", justify="left").grid(column=0, row=0)
 button1 = Button(leftframe, text="EXIT", command=a, bg="grey15", fg="white", bd=0).grid(column=0, row=1)
 
 

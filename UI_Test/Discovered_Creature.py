@@ -23,9 +23,9 @@ frame = Frame(root, bg="grey15")
 frame.place(relheight=1, relwidth=1)
 
 
-label1 = Label(frame, text=f"you approach the creature and look closer its got {skin[skinrandom]} skin").grid(column=0, row=0)
-label2 = Label(frame, text=f"and {teeth[skinrandom]} teeth and {claws[clawrandom]} {clawsharpness[clawsharpnessrandom]} claws").grid(column=0, row=1)
-label3 = Label(frame, text="do you want to attack?",).grid(column=0, row=2)
+label1 = Label(frame, text=f"you approach the creature and look closer its got {skin[skinrandom]} skin", bg="grey15", fg="white", justify="left").grid(column=0, row=0)
+label2 = Label(frame, text=f"and {teeth[skinrandom]} teeth and {claws[clawrandom]} {clawsharpness[clawsharpnessrandom]} claws", bg="grey15", fg="white", justify="left").grid(column=0, row=1)
+label3 = Label(frame, text="do you want to attack?", bg="grey15", fg="white", justify="left").grid(column=0, row=2)
 button1 = Button(frame, text="YES", command=a, bg="grey15", fg="white", bd=0).grid(column=0, row=3)
 button2 = Button(frame, text="NO", command=b, bg="grey15", fg="white", bd=0).grid(column=0, row=4)
 
