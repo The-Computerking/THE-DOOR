@@ -3,27 +3,23 @@ import subprocess
 from Items import chestia
 
 
-def d(): root.destroy()
-def n(): 
+def a(): 
     root.destroy()
     subprocess.run("python UI_Test/Next_Day.py", shell=True)
+def b(): 
+    root.destroy()
+
 
 root = Tk()
 root.geometry("800x800")
 frame = Frame(root, bg="grey15")
 frame.place(relheight=1, relwidth=1)
 
-leftframe = Frame(root)
-leftframe.pack(side=LEFT)
 
-rightframe = Frame(root)
-rightframe.pack(side=RIGHT)
-
-doortxt = Label(frame, text=f"inside the chest is {chestia}").grid(column=0, row=0)
-button1 = Button(leftframe, text="YES", command=n, bg="grey15", fg="white", bd=0).grid(column=0, row=1)
-button2 = Button(leftframe, text="NO", command=d, bg="grey15", fg="white", bd=0).grid(column=0, row=2)
+lable1 = Label(frame, text=f"inside the chest is {chestia}").grid(column=0, row=0)
+button1 = Button(frame, text="YES", command=a, bg="grey15", fg="white", bd=0).grid(column=0, row=1)
+button2 = Button(frame, text="NO", command=b, bg="grey15", fg="white", bd=0).grid(column=0, row=2)
 
 
-
-root.title("Test")
+root.title("Inside_Chest")
 root.mainloop()
