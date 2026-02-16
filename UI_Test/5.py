@@ -1,13 +1,16 @@
 from tkinter import *
+import tkinter as tk
 import subprocess
 
 
-def a(): 
-    root.destroy()
-    subprocess.run("python UI_Test/Found_Creature.py", shell=True)
-def b(): 
-    root.destroy()
-
+def a(event): 
+    ans = ans_var.get()
+    print(ans)
+    if ans == "yes":
+        root.destroy()
+        subprocess.run("python UI_Test/6.py", shell=True)
+    elif ans == "exit":
+        root.destroy()
 
 root = Tk()
 root.geometry("800x800")
@@ -15,12 +18,16 @@ frame = Frame(root, bg="grey15")
 frame.place(relheight=1, relwidth=1)
 
 
+ans_var = tk.StringVar()
+
+
 label1 = Label(frame, text="you come back the next day", bg="grey15", fg="white", justify="left").grid(column=0, row=0)
 label2 = Label(frame, text="do you want to enter again?", bg="grey15", fg="white", justify="left").grid(column=0, row=1)
-button1 = Button(frame, text="YES", command=a, bg="grey15", fg="white", bd=0).grid(column=0, row=2)
-button2 = Button(frame, text="NO", command=b, bg="grey15", fg="white", bd=0).grid(column=0, row=3)
+entry1 = Entry(frame, textvariable=ans_var, bg="grey12", fg="white", bd=0)
+entry1.grid(column=0, row=2)
+entry1.bind("<Return>", a)
 
 
 
-root.title("Next_Day")
+root.title("5")
 root.mainloop()
