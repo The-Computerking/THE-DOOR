@@ -15,87 +15,151 @@ from Items import chestia3
 
 
 def two(event):
-    label1.config(text="do you want to enter the room")
-    label2.config(text=" ")
-    bind1 = entry1.bind("<Return>", three)
+    ans = ans_var.get()
+    if ans == "yes":
+        label1.config(text="do you want to enter the room")
+        label2.config(text=" ")
+        bind1 = entry1.bind("<Return>", three)
+    elif ans == "exit":
+        root_one.destroy()
 
 
 def three(event):
-    label1.config(text="you see a chest do you want to open the chest")
-    bind1 = entry1.bind("<Return>", four)
+    ans = ans_var.get()
+    if ans == "yes":
+        label1.config(text="you see a chest do you want to open the chest")
+        bind1 = entry1.bind("<Return>", four)
+    elif ans == "exit":
+        root_one.destroy()
 
 
 def four(event):
-    label1.config(text=f"inside the chest is {chestia}")
-    bind1 = entry1.bind("<Return>", five)
+    ans = ans_var.get()
+    if ans == "yes":
+        label1.config(text=f"inside the chest is {chestia}")
+        bind1 = entry1.bind("<Return>", five)
+    elif ans == "exit":
+        root_one.destroy()
 
 
 def five(event):
-    label1.config(text="you come back the next day")
-    label2.config(text="do you want to enter again?")
-    bind1 = entry1.bind("<Return>", six)
+    ans = ans_var.get()
+    if ans == "yes":
+        label1.config(text="you come back the next day")
+        label2.config(text="do you want to enter again?")
+        bind1 = entry1.bind("<Return>", six)
+    elif ans == "exit":
+        root_one.destroy()
 
 
 def six(event):
-    label1.config(text="inside you see a creature")
-    label2.config(text="do you want to get a closer look at it?")
-    bind1 = entry1.bind("<Return>", seven)
+    ans = ans_var.get()
+    if ans == "yes":
+        label1.config(text="inside you see a creature")
+        label2.config(text="do you want to get a closer look at it?")
+        bind1 = entry1.bind("<Return>", seven)
+    elif ans == "exit":
+        root_one.destroy()
 
 
 def seven(event):
-    label1.config(text=f"you approach the creature and look closer its got {skin[skinrandom]} skin")
-    label2.config(text=f"and {teeth[skinrandom]} teeth and {claws[clawrandom]} {clawsharpness[clawsharpnessrandom]} claws")
-    label3.config(text="do you want to attack?")
-    bind1 = entry1.bind("<Return>", eight)
+    ans = ans_var.get()
+    if ans == "yes":
+        label1.config(text=f"you approach the creature and look closer its got {skin[skinrandom]} skin")
+        label2.config(text=f"and {teeth[skinrandom]} teeth and {claws[clawrandom]} {clawsharpness[clawsharpnessrandom]} claws")
+        label3.config(text="do you want to attack?")
+        bind1 = entry1.bind("<Return>", eight)
+    elif ans == "exit":
+        root_one.destroy()
 
 
 def eight(event):
-    label1.config(text="you killed it")
-    label2.config(text="the floor disapears do you want to jump down?")
-    label3.config(text=" ")
-    bind1 = entry1.bind("<Return>", nine)
+    ans = ans_var.get()
+    if ans == "yes":
+        label1.config(text="you killed it")
+        label2.config(text="the floor disapears do you want to jump down?")
+        label3.config(text=" ")
+        bind1 = entry1.bind("<Return>", nine)
+    elif ans == "exit":
+        root_one.destroy()
 
 
 def nine(event):
-    label1.config(text="you see a chest")
-    label2.config(text="do you want to open the chest?")
-    bind1 = entry1.bind("<Return>", ten)
+    ans = ans_var.get()
+    if ans == "yes":
+        label1.config(text="you see a chest")
+        label2.config(text="do you want to open the chest?")
+        bind1 = entry1.bind("<Return>", ten)
+    elif ans == "exit":
+        root_one.destroy()
 
 
 def ten(event):
-    label1.config(text=f"inside the chest is {chestia2}")
-    label2.config(text=" ")
-    bind1 = entry1.bind("<Return>", eleven)
+    ans = ans_var.get()
+    if ans == "yes":
+        label1.config(text=f"inside the chest is {chestia2}")
+        label2.config(text=" ")
+        bind1 = entry1.bind("<Return>", eleven)
+    elif ans == "exit":
+        root_one.destroy()
 
 
 def eleven(event):
-    label1.config(text="there is a door do you want to enter?")
-    bind1 = entry1.bind("<Return>", twelve)
+    ans = ans_var.get()
+    if ans == "yes":
+        label1.config(text="there is a door do you want to enter?")
+        bind1 = entry1.bind("<Return>", twelve)
+    elif ans == "exit":
+        root_one.destroy()
 
 
 # needs work
 def twelve(event):
-    label1.config(text="inside is a sleeping arachnid and a chest")
-    label2.config(text="do you want to fight the arachnid, open the chest or leave?")
-    bind1 = entry1.bind("<Return>", thirteen)
+    ans = ans_var.get()
+    if ans == "yes":
+        label1.config(text="inside is a sleeping arachnid and a chest")
+        label2.config(text="do you want to fight, open chest or exit?")
+        bind1 = entry1.bind("<Return>", thirteen)
+    elif ans == "exit":
+        root_one.destroy()
 
 
 def thirteen(event):
-    label1.config(text="you killed it")
-    label2.config(text="do you want to open the chest?")
-    bind1 = entry1.bind("<Return>", fourteen)
+    ans = ans_var.get()
+    if ans == "yes":
+        label1.config(text="you killed it")
+        label2.config(text="do you want to open the chest?")
+        bind1 = entry1.bind("<Return>", fourteen)
+    elif ans == "exit":
+        root_one.destroy()
+    elif ans == "open":
+        label1.config(text="YOU DIED")
+        label2.config(text="press enter to leave")
+        bind1 = entry1.bind("<Return>", end)
 
 
 def fourteen(event):
-    label1.config(text=f"inside the chest is {chestia3}")
-    label2.config(text=" ")
-    bind1 = entry1.bind("<Return>", fifteen)
+    ans = ans_var.get()
+    if ans == "yes":
+        label1.config(text=f"inside the chest is {chestia3}")
+        label2.config(text=" ")
+        bind1 = entry1.bind("<Return>", fifteen)
+    elif ans == "exit":
+        root_one.destroy()
 
 
 def fifteen(event):
-    label1.config(text="the floor colapses you fall to the next floor")
-    label2.config(text="WORK IN PROGRESS")
-    bind1 = entry1.bind("<Return>", )
+    ans = ans_var.get()
+    if ans == "yes":
+        label1.config(text="the floor colapses you fall to the next floor")
+        label2.config(text="WORK IN PROGRESS")
+        bind1 = entry1.bind("<Return>", )
+    elif ans == "exit":
+        root_one.destroy()
+
+
+def end(event):
+    root_one.destroy()
 
 
 root_one = Tk()
