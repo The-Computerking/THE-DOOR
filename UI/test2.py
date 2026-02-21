@@ -20,12 +20,12 @@ def one(event):
         label1.config(text="you see a door")
         label2.config(text="do you want to open the door? ")
         bind1 = entry1.bind("<Return>", two)
-        with open("UI/savefile.txt", "w") as f:
+        with open("savefile.txt", "w") as f:
             f.write("one")
     elif ans == "exit":
         root_one.destroy()
     elif ans == "load":
-            with open("UI/savefiles/savefile.txt", "r") as f:
+            with open("savefile.txt", "r") as f:
                 level = f.read()
             if level == "two":
                 two(event)
@@ -63,7 +63,7 @@ def two(event):
         label1.config(text="do you want to enter the room")
         label2.config(text=" ")
         bind1 = entry1.bind("<Return>", three)
-        with open("UI/savefile.txt", "w") as f:
+        with open("savefile.txt", "w") as f:
             f.write("two")
     elif ans == "exit":
         root_one.destroy()
@@ -74,7 +74,7 @@ def three(event):
     if ans == "yes" or ans == "load":
         label1.config(text="you see a chest do you want to open the chest")
         bind1 = entry1.bind("<Return>", four)
-        with open("UI/savefile.txt", "w") as f:
+        with open("savefile.txt", "w") as f:
             f.write("three")
     elif ans == "exit":
         root_one.destroy()
@@ -85,9 +85,9 @@ def four(event):
     if ans == "yes" or ans == "load":
         label1.config(text=f"inside the chest is {chestia}")
         bind1 = entry1.bind("<Return>", five)
-        with open("UI/savefile.txt", "w") as f:
+        with open("savefile.txt", "w") as f:
             f.write("three")
-        with open("UI/itemsavefile.txt", "w") as f:
+        with open("itemsavefile.txt", "w") as f:
            f.write(f"{chestia} \n")
     elif ans == "exit":
         root_one.destroy()
@@ -99,7 +99,7 @@ def five(event):
         label1.config(text="you come back the next day")
         label2.config(text="do you want to enter again?")
         bind1 = entry1.bind("<Return>", six)
-        with open("UI/savefile.txt", "w") as f:
+        with open("savefile.txt", "w") as f:
             f.write("five")
     elif ans == "exit":
         root_one.destroy()
@@ -111,7 +111,7 @@ def six(event):
         label1.config(text="inside you see a creature")
         label2.config(text="do you want to get a closer look at it?")
         bind1 = entry1.bind("<Return>", seven)
-        with open("UI/savefile.txt", "w") as f:
+        with open("savefile.txt", "w") as f:
             f.write("six")
     elif ans == "exit":
         root_one.destroy()
@@ -124,7 +124,7 @@ def seven(event):
         label2.config(text=f"and {teeth[skinrandom]} teeth and {claws[clawrandom]} {clawsharpness[clawsharpnessrandom]} claws")
         label3.config(text="do you want to attack?")
         bind1 = entry1.bind("<Return>", eight)
-        with open("UI/savefile.txt", "w") as f:
+        with open("savefile.txt", "w") as f:
             f.write("seven")
     elif ans == "exit":
         root_one.destroy()
@@ -137,7 +137,7 @@ def eight(event):
         label2.config(text="the floor disapears do you want to jump down?")
         label3.config(text=" ")
         bind1 = entry1.bind("<Return>", nine)
-        with open("UI/savefile.txt", "w") as f:
+        with open("savefile.txt", "w") as f:
             f.write("eight")
     elif ans == "exit":
         root_one.destroy()
@@ -149,7 +149,7 @@ def nine(event):
         label1.config(text="you see a chest")
         label2.config(text="do you want to open the chest?")
         bind1 = entry1.bind("<Return>", ten)
-        with open("UI/savefile.txt", "w") as f:
+        with open("savefile.txt", "w") as f:
             f.write("nine")
     elif ans == "exit":
         root_one.destroy()
@@ -161,9 +161,9 @@ def ten(event):
         label1.config(text=f"inside the chest is {chestia2}")
         label2.config(text=" ")
         bind1 = entry1.bind("<Return>", eleven)
-        with open("UI/itemsavefile.txt", "a") as f:
+        with open("itemsavefile.txt", "a") as f:
             f.write(f"{chestia2} \n")
-        with open("UI/savefile.txt", "w") as f:
+        with open("savefile.txt", "w") as f:
             f.write("ten")
     elif ans == "exit":
         root_one.destroy()
@@ -174,7 +174,7 @@ def eleven(event):
     if ans == "yes" or ans == "load":
         label1.config(text="there is a door do you want to enter?")
         bind1 = entry1.bind("<Return>", twelve)
-        with open("UI/savefile.txt", "w") as f:
+        with open("savefile.txt", "w") as f:
             f.write("eleven")
     elif ans == "exit":
         root_one.destroy()
@@ -186,7 +186,7 @@ def twelve(event):
         label1.config(text="inside is a sleeping arachnid and a chest")
         label2.config(text="do you want to fight, open chest or exit?")
         bind1 = entry1.bind("<Return>", thirteen)
-        with open("UI/savefile.txt", "w") as f:
+        with open("savefile.txt", "w") as f:
             f.write("twelve")
     elif ans == "exit":
         root_one.destroy()
@@ -198,7 +198,7 @@ def thirteen(event):
         label1.config(text="you killed it")
         label2.config(text="do you want to open the chest?")
         bind1 = entry1.bind("<Return>", fourteen)
-        with open("UI/savefile.txt", "w") as f:
+        with open("savefile.txt", "w") as f:
             f.write("thirteen")
     elif ans == "exit":
         root_one.destroy()
@@ -214,9 +214,9 @@ def fourteen(event):
         label1.config(text=f"inside the chest is {chestia3}")
         label2.config(text=" ")
         bind1 = entry1.bind("<Return>", fifteen)
-        with open("UI/savefile.txt", "w") as f:
+        with open("savefile.txt", "w") as f:
             f.write("fourteen")
-        with open("UI/itemsavefile.txt", "a") as f:
+        with open("itemsavefile.txt", "a") as f:
             f.write(f"{chestia3} \n")
     elif ans == "exit":
         root_one.destroy()
@@ -228,7 +228,7 @@ def fifteen(event):
         label1.config(text="the floor colapses you fall to the next floor")
         label2.config(text="WORK IN PROGRESS")
         bind1 = entry1.bind("<Return>", )
-        with open("UI/savefile.txt", "w") as f:
+        with open("savefile.txt", "w") as f:
             f.write("fifteen")
     elif ans == "exit":
         root_one.destroy()
