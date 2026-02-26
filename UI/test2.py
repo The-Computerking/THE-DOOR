@@ -17,7 +17,7 @@ from Items import chestia3
 def one(event):
     ans = ans_var.get()
     if ans == "new":
-        label1.config(text="you see a door")
+        label1.config(text="you see a door                             ")
         label2.config(text="do you want to open the door? ")
         bind1 = entry1.bind("<Return>", two)
         with open("savefile.txt", "w") as f:
@@ -108,7 +108,7 @@ def five(event):
 def six(event):
     ans = ans_var.get()
     if ans == "yes" or ans == "load":
-        label1.config(text="inside you see a creature")
+        label1.config(text="inside you see a creature                       ")
         label2.config(text="do you want to get a closer look at it?")
         bind1 = entry1.bind("<Return>", seven)
         with open("savefile.txt", "w") as f:
@@ -239,7 +239,9 @@ def end(event):
 
 
 root_one = Tk()
-root_one.geometry("800x800")
+root_one.attributes('-topmost',True)
+
+
 frame = Frame(root_one, bg="grey15")
 frame.place(relheight=1, relwidth=1)
 
@@ -247,9 +249,9 @@ frame.place(relheight=1, relwidth=1)
 ans_var = tk.StringVar()
 
 
-label1 = Label(frame, text="Hello welcome to the game", bg="grey15", fg="white", justify="left")
+label1 = Label(frame, text="Hello welcome to the game", bg="grey15", fg="white")
 label1.grid(column=0, row=0)
-label2 = Label(frame, text="please type load or new", bg="grey15", fg="white", justify="left")
+label2 = Label(frame, text="please type load or new       ", bg="grey15", fg="white")
 label2.grid(column=0, row=1)
 label3 = Label(frame, text=" ", bg="grey15", fg="white", justify="left")
 label3.grid(column=0, row=2)
